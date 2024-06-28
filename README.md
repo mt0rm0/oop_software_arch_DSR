@@ -1,1 +1,6 @@
-# oop_software_arch_DSR
+# OOP and Software Architecture, Materials for for DSR
+
+## Content
+
+## To do
+- 

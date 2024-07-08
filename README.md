@@ -21,13 +21,11 @@ We are not going to be able to cover in just two days all the topics in an exhau
   - **Project Structure**: 
 
 ## Topics
-- Project Structure
+- Project Folder Structure
 - Code versioning
 - Data versioning
-- OOP
-- Documentation
 - Logging
-- Exceptions
+- Handling Exceptions
 - Small introduction to Tests
 - Experiment tracking
 

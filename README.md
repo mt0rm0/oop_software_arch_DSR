@@ -17,16 +17,17 @@ We are not going to be able to cover in just two days all the topics in an exhau
 - **Introduction**
   - **Hands-On**: Analyzing a Data Science Project
   - **Overview**: What we will cover in these sessions
-- **Part 1**
-  - **Project Structure**: 
+- **Part 1: Object Oriented Programming**
+  - 
+- **Part 2: Notions of Software architecture for Data Science**
+  - **Project Structure**:
+  - **Logging**:
+  - **Handling Exceptions**:
 
 ## Topics
-- Project Folder Structure
+- Small introduction to Tests
 - Code versioning
 - Data versioning
-- Logging
-- Handling Exceptions
-- Small introduction to Tests
 - Experiment tracking
 
 ## To do

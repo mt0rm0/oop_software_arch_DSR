@@ -2,3 +2,5 @@
 .vscode
 references/*
 __pycache__
+
+/envs/*

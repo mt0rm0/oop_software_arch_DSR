@@ -1,0 +1,6 @@
+2024-09-26 15:22:31,235 - WARNING - This is a warning message
+2024-09-26 15:22:31,236 - ERROR - This is an error message
+2024-09-26 15:22:31,236 - CRITICAL - This is a critical message
+2024-09-26 15:42:58,477 - WARNING - This is a warning message
+2024-09-26 15:42:58,477 - ERROR - This is an error message
+2024-09-26 15:42:58,478 - CRITICAL - This is a critical message

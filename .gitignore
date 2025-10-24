@@ -2,3 +2,6 @@
 .vscode
 references/*
 __pycache__
+
+data/
+!data/description.json

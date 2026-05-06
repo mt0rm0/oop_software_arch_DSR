@@ -1,34 +1,94 @@
-# OOP and Software Architecture, Materials for DSR
+# OOP and Software Architecture for Data Scientists
 
-## Description
-Materials about relevant topics in Software Architecture, specially Object Oriented Programming, as part of the learning contents for the students of Data Science Retreat, Berlin. These contents are prepared for being taught in 2 consecutive sessions of 8 hours each.
+**Data Science Retreat · 2 days · 16 hours**
 
-## Requirements
-It is assumed that the students have at the beginning of this sessions a decent Python level, and that they are familiar with the basics of Machine learning, including data acquisition and preparation, feature extraction, modelling (including hyperparameter tuning) and model evaluation.
+This course teaches OOP and software engineering/architecture fundamentals through the lens of data science. We are not going to build abstract toy examples, but to apply every concept to real ML problems: feature pipelines, training loops, config management, and production hardening.
 
-## Motivation
-A lot of data scientists don't come from a Computer Science background, and even though they learn fast how to code and use properly the different packages and frameworks for cleaning and preparing the data and modelling, they often lack of a wider vision and tend to work or code in a way that is not only hard to maintain (spaguetti code) but also hard to deploy or scale up.
+---
 
-In the two days assigned to this part, we will discuss how to improve and reinforce that area in your learning path by giving you a basic understanding of the parts of software architecture that are going to impact your way of doing Data Science (and thus, your team work skills, or your success chances when applying for jobs in the field, to name just a couple of examples).
+## The Through-Line
 
-We are not going to be able to cover in just two days all the topics in an exhaustive manner and to claim otherwise would be an insult to all Software Architects and Computer Science professionals who have been devoting years of their lives in mastering these skills. So our goal is not to teach you everything, but to teach you the basics so you can start working on your own, and at the same time, make you aware of these topics so you can decide how important they are for you, and keep researching and improving them at your own pace.
+We start with a broken notebook (session 00). We end with production-grade code (session 14). Every concept in between is a tool that fixes something wrong with that original code.
 
-## Content
-- **Introduction**
-  - **Hands-On**: Analyzing a Data Science Project
-  - **Overview**: What we will cover in these sessions
-- **Part 1: Object Oriented Programming**
-  - 
-- **Part 2: Notions of Software architecture for Data Science**
-  - **Project Structure**:
-  - **Logging**:
-  - **Handling Exceptions**:
+---
 
-## Topics
-- Small introduction to Tests
-- Code versioning
-- Data versioning
-- Experiment tracking
+## Structure
 
-## To do
-- 
+### Day 1 - Writing Code That Doesn't Rot
+
+| # | Notebook | Time | What you learn |
+|---|---|---|---|
+| 00 | Warmup: What's Wrong With This Code? | 30 min | Diagnose a realistic messy notebook |
+| 01 | Intro to OOP | 90 min | Classes, objects, `__init__`, methods, properties |
+| 02 | Inheritance | 60 min | Subclasses, method overriding, `super()`, MRO |
+| 03 | Docstrings and Type Hints | 75 min | Google-style docstrings, type annotations, DS-specific patterns, `Callable`, `TypeAlias`, `TYPE_CHECKING` |
+| 04 | Special Methods | 60 min | `__str__`, `__len__`, `__getitem__`, context managers |
+| 05 | Encapsulation, Abstraction & Layering | 90 min | `_protected` attributes, ABCs, data leakage, layered architecture |
+| 06 | Polymorphism, Duck Typing & Protocols | 75 min | Polymorphic pipelines, duck typing, the tension with type hints, structural typing with `Protocol` |
+
+### Day 2 - Code That Works in Production
+
+| # | Notebook | Time | What you learn |
+|---|---|---|---|
+| 07 | UML Class Diagrams | 30 min | Sketch first, code second |
+| 08 | Dataclasses and Pydantic | 60 min | Structured config, validation, `@classmethod` factories |
+| 09 | Project Structure | 60 min | `src` layout, `pyproject.toml`, `__init__.py` |
+| 10 | Logging | 60 min | Log levels, handlers, JSON logs, loguru |
+| 11 | Handling Exceptions | 60 min | Custom hierarchies, propagation, when NOT to catch |
+| 12 | Testing with pytest | 90 min | Fixtures, parametrize, ML-specific tests, mocking |
+| 13 | Capstone: Refactoring | 120 min | Transform the warm-up spaghetti into production code |
+| 14 | Git, DVC, and MLflow | 60 min | Reproducible experiments end-to-end |
+
+---
+
+## Setup
+
+This repo uses **uv** for dependency management and **VS Code** as the IDE.
+
+```bash
+# 1. Clone
+git clone <repo-url>
+cd oop_software_arch_DSR
+
+# 2. Create the venv and install all dependencies (reads uv.lock for exact pins)
+uv sync --extra dev
+
+# 3. Open in VS Code — it will detect .venv automatically
+code .
+```
+
+VS Code will prompt you to install the recommended extensions on first open (Jupyter, Ruff, mypy, Mermaid preview). Accept them all.
+
+**Selecting the kernel in a notebook:**
+Open any `.ipynb` → click the kernel picker (top right) → choose the interpreter at `.venv/bin/python` (it should have the same name as the project). VS Code remembers this per-workspace.
+
+**Running tests:**
+
+```bash
+uv run pytest
+```
+
+**Adding a new dependency:**
+
+```bash
+uv add <package>          # runtime
+uv add --dev <package>    # dev only
+```
+
+Python 3.13 required (pinned in `.python-version`).
+
+---
+
+## Prerequisites
+
+- Python basics (functions, lists, dicts)
+- pandas and sklearn at a "I've used them before" level
+- Git basics (if not: go to [learngitbranching.js.org](https://learngitbranching.js.org/) first)
+
+---
+
+## What's Not Here
+
+- Deep dive into design patterns (Factory, Observer, Strategy) — that's a separate course
+- Concurrency and async — out of scope for batch ML
+- API deployment (FastAPI) — mentioned in the capstone as a "next step" option

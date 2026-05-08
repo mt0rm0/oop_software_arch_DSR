@@ -34,5 +34,6 @@
   "extensions.ignoreRecommendations": false,
   "jupyter.kernels.excludePythonEnvironments": [
     "${workspaceFolder}/.venv/bin/python"
-  ]
+  ],
+  "python.analysis.typeCheckingMode": "off"
 }

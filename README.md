@@ -103,7 +103,7 @@ Work in your buddy pair. Explaining your code to someone else is one of the fast
 ├── tests_capstone/       acceptance tests for your capstone package
 ├── configs/              experiment configurations (JSON)
 ├── data/raw/             the Telco churn dataset, see data/README.md
-├── docs/                 cheat sheet, trainer guide, curriculum
+├── docs/                 cheat sheet, further reading, trainer guide
 ├── playground/           your scratch space, ignored by git
 ├── scripts/check_setup.py
 └── pyproject.toml        dependencies and tool settings
@@ -147,20 +147,14 @@ The tracking tools for notebook X1 are optional and large: `uv sync --extra trac
 
 ## After the workshop
 
-A realistic next step is to take one notebook from your own work and apply the capstone recipe to it: move the reusable parts into a package, put configuration into a dataclass, add three tests, and run it from the command line. Then come back to the notebooks in this order when you need them:
+A realistic next step is to take one notebook from your own work and apply the capstone recipe to it: move the reusable parts into a package, put configuration into a dataclass, add three tests, and run it from the command line. Then come back to this repository when you need it:
 
-1. [`docs/cheatsheet.md`](docs/cheatsheet.md) for syntax you have forgotten
-2. Notebook 08 when you are about to design something bigger
-3. X1 when you start running many experiments
-4. X2 and X3 when you want to write code that plugs into scikit-learn
+1. [`docs/cheatsheet.md`](docs/cheatsheet.md) for syntax you have forgotten.
+2. [`docs/further_reading.md`](docs/further_reading.md) for books, articles, papers and talks, ordered as a learning path.
+3. The **Sources and further reading** section at the end of every notebook, for the references on that one topic.
+4. Notebook 08 when you are about to design something bigger, X1 when you start running many experiments, X2 and X3 when you want to write code that plugs into scikit-learn.
 
-Good further reading:
-
-- [The Python Tutorial: Classes](https://docs.python.org/3/tutorial/classes.html)
-- [scikit-learn: Developing scikit-learn estimators](https://scikit-learn.org/stable/developers/develop.html)
-- [Real Python: Object-Oriented Programming in Python](https://realpython.com/python3-object-oriented-programming/)
-- [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org/) for project layout conventions
-- Luciano Ramalho, *Fluent Python* (2nd edition, O'Reilly), for the Python data model in depth
+If you only read one thing after the workshop, make it [*Architecture Patterns with Python*](https://www.cosmicpython.com/) (free online). If you want to understand Python itself more deeply, read Luciano Ramalho's *Fluent Python*.
 
 ## Credits
 

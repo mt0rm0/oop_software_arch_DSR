@@ -1,13 +1,13 @@
 # Trainer guide
 
-How to run the two days. Written for whoever teaches the workshop, including a colleague who has never seen it before. Methods are named as in the "Methodenkoffer für AI-Workshops" so they can be looked up there.
+How to run the two days. Written for whoever teaches the workshop, including a colleague who has never seen it before.
 
 ---
 
 ## The design in one page
 
 - **Audience:** career changers into data science, many with a PhD, very mixed programming experience. You cannot predict the level of a batch, so the material is built for all levels at once.
-- **Goal:** everybody can write their own classes and understand the code they meet. Experienced participants are challenged, not bored. See `docs/curriculum.md` for the competence targets.
+- **Goal:** everybody can write their own classes and understand the code they meet. Experienced participants are challenged, not bored.
 - **One story:** a telecom churn model, real data (`data/raw/telco_churn.csv`). Notebook 00 is a working but fragile notebook with a hidden bug: it re-fits its encoder on each new batch, so a customer's score depends on who else is in the file. Day 1 builds the tools to fix it; day 2 turns the result into a tested package (capstone). The finished version is `src/churn`.
 - **Rhythm:** no input block longer than about 20 minutes. Every concept is followed by a hands-on exercise or a check-your-understanding question within 20 to 30 minutes.
 - **Differentiation:** every exercise exists at three levels (Core, Stretch, Challenge). The `X` notebooks are a challenge track. The capstone has three test files, one per level.
@@ -39,7 +39,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | | |
 | --- | --- |
 | Goal | Arrive, know the plan, working setup, buddy pairs formed |
-| Methods | One-word check-in (Ein-Wort-Check-in), advance organizer, KWL chart (first two columns) |
+| Methods | One-word check-in, advance organizer, KWL chart (first two columns) |
 | Trainer | Show the agenda (README) as the advance organizer and keep it visible both days. Explain the churn story in two sentences. Explain Core / Stretch / Challenge and that check cells fail until solved. |
 | Participants | One word each: "How do you feel about writing classes?" Write one sticky for "I know" and one for "I want to learn" on the KWL board. Run `scripts/check_setup.py` with their buddy. |
 | If setup fails | Pair the person with their buddy's screen for the morning and fix it at the coffee break. Do not debug installations in front of the group. |
@@ -49,7 +49,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | | |
 | --- | --- |
 | Goal | Feel the pain the next two days will remove. Find problems, not solutions. |
-| Methods | Mystery entry (Mystery-Einstieg), think-pair-share |
+| Methods | Mystery opener, think-pair-share |
 | Flow | 3 min: run the notebook top to bottom, it works and the report looks fine. 2 min alone: "Where would this hurt you?" 10 min in pairs with the prompts in the notebook. 10 min plenary: collect problems on the whiteboard, cluster them (affinity mapping light). 5 min: show the "next month's customers" cell and the mystery. Do not explain the cause. |
 | Key moment | The same customer gets a different prediction depending on the batch. Leave it open: "By this afternoon you will be able to explain and fix this." Write it on the parking lot. |
 | Differentiation | Experienced participants usually spot the bug. Ask them not to reveal it, and to write down how they would design the fix instead. |

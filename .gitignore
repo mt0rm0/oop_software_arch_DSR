@@ -1,4 +1,53 @@
-.venv
-.vscode
-references/*
-__pycache__
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ── uv / virtual environments ─────────────────────────────────────────────
+.venv/
+# uv.lock is committed on purpose: it pins exact versions for reproducibility
+
+# ── Data ──────────────────────────────────────────────────────────────────
+# The workshop dataset (data/raw/telco_churn.csv, ~1 MB, Apache-2.0) is committed
+# so the course works offline. In your own projects, track data with DVC instead.
+data/interim/
+data/processed/
+*.parquet
+*.feather
+
+# ── Models and other artefacts ────────────────────────────────────────────
+models/
+*.pkl
+*.joblib
+mlruns/
+mlartifacts/
+.dvc/tmp/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+
+# ── Workshop scratch space (your own experiments, never committed) ────────
+playground/*
+!playground/README.md
+
+# ── Secrets ───────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.key
+secrets.yaml
+credentials.json
+
+# ── OS / editors ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*.log
+.vscode/launch.json

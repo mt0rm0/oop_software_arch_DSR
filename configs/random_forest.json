@@ -1,0 +1,5 @@
+{
+  "model": "random_forest",
+  "model_params": {"n_estimators": 300, "min_samples_leaf": 20},
+  "threshold": 0.3
+}

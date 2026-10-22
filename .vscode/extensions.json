@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    // Python + Jupyter (required)
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+
+    // Ruff — linter and formatter (required)
+    "charliermarsh.ruff",
+
+    // Type checking
+    "ms-python.mypy-type-checker",
+
+    // Mermaid diagrams in markdown (notebook 08)
+    "bierner.markdown-mermaid",
+
+    // TOML syntax highlighting (for pyproject.toml)
+    "tamasfe.even-better-toml",
+
+    // Git integration
+    "eamodio.gitlens"
+  ]
+}

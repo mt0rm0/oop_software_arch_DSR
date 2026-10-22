@@ -1,0 +1,82 @@
+[project]
+name = "oop-software-arch-dsr"
+version = "1.0.0"
+description = "OOP and Software Architecture for Data Scientists (Data Science Retreat workshop)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+    "pydantic>=2.6",
+    "joblib>=1.3",
+    # Notebook runtime (VS Code Jupyter extension needs ipykernel)
+    "ipykernel>=6.29",
+    "jupyter>=1.1",
+]
+
+[project.optional-dependencies]
+# Only needed for the self-study notebook X1 (Git, DVC and MLflow). Heavy, so not installed by default.
+tracking = [
+    "dvc>=3.49",
+    "mlflow>=2.11",
+]
+
+[project.scripts]
+churn-train = "churn.__main__:main"
+
+[dependency-groups]
+# `uv sync` installs this group by default
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "ruff>=0.4",
+    "mypy>=1.9",
+    "pandas-stubs>=2",
+    "loguru>=0.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# churn: the reference package (the "after" picture of the warm-up notebook)
+# churn_capstone: your package, built during the capstone (notebook 12)
+packages = ["src/churn", "src/churn_capstone"]
+
+# ── Ruff (linter + formatter) ──────────────────────────────────────────────
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # bugbear
+]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+# Notebooks redefine classes step by step and import where a concept is introduced
+"notebooks/*" = ["E402", "F401", "F811", "B018", "B024", "B027"]
+
+# ── pytest ─────────────────────────────────────────────────────────────────
+
+[tool.pytest.ini_options]
+# The capstone tests live in tests_capstone/ and are run explicitly:
+#   uv run pytest tests_capstone
+testpaths = ["tests"]
+addopts = "-q --tb=short"
+
+# ── mypy ───────────────────────────────────────────────────────────────────
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+files = ["src/churn"]

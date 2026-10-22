@@ -42,7 +42,7 @@ Both days run from 09:30 to 17:30, with coffee breaks at 11:00 and 15:45 (15 min
 
 | Time | Notebook | What you learn |
 | --- | --- | --- |
-| 09:30 | Opening | Goals, buddy pairs, setup check |
+| 09:30 | Opening | Goals, how we work, setup check |
 | 09:50 | [00 Warm-up: what's wrong with this code?](notebooks/00_warmup_whats_wrong.ipynb) | Diagnose a working but fragile notebook, and find its hidden bug |
 | 10:20 | [01 Classes and objects](notebooks/01_classes_and_objects.ipynb) | Classes, instances, `__init__`, `self`, methods, properties, class methods |
 | 12:00 | [02 Inheritance](notebooks/02_inheritance.ipynb) | Subclasses, overriding, `super()`, when not to inherit |
@@ -88,7 +88,11 @@ Each exercise has a **check cell** with a few `assert` statements. It fails unti
 
 Sections called **Going further** are not part of the live session. They are there for later.
 
-Work in your buddy pair. Explaining your code to someone else is one of the fastest ways to find out what you have not understood yet.
+Every exercise is done at the computer, and every one works **alone or in pairs**, in the room or online. In pairs, one person types (the driver) and the other reviews and thinks ahead (the navigator); swap at every exercise. Online, the driver shares their screen or you both join a VS Code Live Share session.
+
+Each exercise ends with a **Discuss** question: a design choice, a trade-off, or a link to your own work. Talk it through with your partner or the group. If you work alone, write a two-sentence answer in a markdown cell; explaining your reasoning in writing is one of the fastest ways to find out what you have not understood yet.
+
+**Check your understanding** questions come with a cell to run: predict the output first, then run it.
 
 ---
 
@@ -127,7 +131,7 @@ code .
 
 In VS Code, accept the recommended extensions (Python, Jupyter, Ruff, Mermaid). Open a notebook, click the kernel picker in the top right corner and choose the interpreter in `.venv` (`.venv/bin/python`, or `.venv\Scripts\python.exe` on Windows).
 
-Please do this before the workshop. If something fails, bring the error message; we will sort it out in the first 20 minutes.
+Please do this before the workshop. If something fails, bring the error message; we will sort it out in the first 20 minutes. If the workshop is online and you would like to pair, also install the **Live Share** extension in VS Code.
 
 ### Commands you will use
 

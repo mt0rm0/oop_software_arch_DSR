@@ -36,34 +36,34 @@ You will not be an expert after two days. You will know what good code looks lik
 
 ## Agenda
 
-Both days run from 09:00 to 17:00, with coffee breaks at 10:30 and 15:15 (15 minutes each) and lunch from 12:30 to 13:30.
+Both days run from 09:30 to 17:30, with coffee breaks at 11:00 and 15:45 (15 minutes each) and lunch from 13:00 to 14:00.
 
 ### Day 1: OOP foundations, from scripts to objects
 
 | Time | Notebook | What you learn |
 | --- | --- | --- |
-| 09:00 | Opening | Goals, buddy pairs, setup check |
-| 09:20 | [00 Warm-up: what's wrong with this code?](notebooks/00_warmup_whats_wrong.ipynb) | Diagnose a working but fragile notebook, and find its hidden bug |
-| 09:50 | [01 Classes and objects](notebooks/01_classes_and_objects.ipynb) | Classes, instances, `__init__`, `self`, methods, properties, class methods |
-| 11:30 | [02 Inheritance](notebooks/02_inheritance.ipynb) | Subclasses, overriding, `super()`, when not to inherit |
-| 13:30 | [03 Special methods](notebooks/03_special_methods.ipynb) | `__repr__`, `__len__`, `__iter__`, `__eq__`, `__add__`, `__call__` |
-| 14:15 | [04 Encapsulation and abstraction](notebooks/04_encapsulation_and_abstraction.ipynb) | Learned state, public vs internal, properties, abstract base classes |
-| 15:30 | [05 Polymorphism, duck typing and protocols](notebooks/05_polymorphism_duck_typing_protocols.ipynb) | One function for many models, `typing.Protocol`, ABC vs Protocol |
-| 16:20 | [06 Code safari: reading real code](notebooks/06_code_safari_reading_real_code.ipynb) | Find today's concepts in scikit-learn and the standard library |
-| 16:50 | Exit ticket | What is still unclear? |
+| 09:30 | Opening | Goals, buddy pairs, setup check |
+| 09:50 | [00 Warm-up: what's wrong with this code?](notebooks/00_warmup_whats_wrong.ipynb) | Diagnose a working but fragile notebook, and find its hidden bug |
+| 10:20 | [01 Classes and objects](notebooks/01_classes_and_objects.ipynb) | Classes, instances, `__init__`, `self`, methods, properties, class methods |
+| 12:00 | [02 Inheritance](notebooks/02_inheritance.ipynb) | Subclasses, overriding, `super()`, when not to inherit |
+| 14:00 | [03 Special methods](notebooks/03_special_methods.ipynb) | `__repr__`, `__len__`, `__iter__`, `__eq__`, `__add__`, `__call__` |
+| 14:45 | [04 Encapsulation and abstraction](notebooks/04_encapsulation_and_abstraction.ipynb) | Learned state, public vs internal, properties, abstract base classes |
+| 16:00 | [05 Polymorphism, duck typing and protocols](notebooks/05_polymorphism_duck_typing_protocols.ipynb) | One function for many models, `typing.Protocol`, ABC vs Protocol |
+| 16:50 | [06 Code safari: reading real code](notebooks/06_code_safari_reading_real_code.ipynb) | Find today's concepts in scikit-learn and the standard library |
+| 17:20 | Exit ticket | What is still unclear? |
 
 ### Day 2: Software engineering and architecture, from objects to software
 
 | Time | Notebook | What you learn |
 | --- | --- | --- |
-| 09:00 | Recap | Your open questions from day 1 |
-| 09:15 | [07 Type hints, docstrings and dataclasses](notebooks/07_type_hints_docstrings_dataclasses.ipynb) | Code that explains itself, validated configuration |
-| 10:45 | [08 Design and architecture](notebooks/08_design_and_architecture.ipynb) | Single responsibility, composition, layers, dependency injection, UML |
-| 11:45 | [09 Exceptions and logging](notebooks/09_exceptions_and_logging.ipynb) | Custom exceptions, where to catch, logging done right |
-| 13:30 | [10 Testing with pytest](notebooks/10_testing_with_pytest.ipynb) | Tests, fixtures, parametrize, what to test in data science code |
-| 14:30 | [11 From notebook to package](notebooks/11_from_notebook_to_package.ipynb) | `src` layout, `pyproject.toml`, imports, entry points |
-| 14:55 | [12 Capstone](notebooks/12_capstone.ipynb) | Refactor the warm-up into a tested package, in pairs |
-| 16:30 | Show and tell, retrospective | What you built, what you take home |
+| 09:30 | Recap | Your open questions from day 1 |
+| 09:45 | [07 Type hints, docstrings and dataclasses](notebooks/07_type_hints_docstrings_dataclasses.ipynb) | Code that explains itself, validated configuration |
+| 11:15 | [08 Design and architecture](notebooks/08_design_and_architecture.ipynb) | Single responsibility, composition, layers, dependency injection, UML |
+| 12:15 | [09 Exceptions and logging](notebooks/09_exceptions_and_logging.ipynb) | Custom exceptions, where to catch, logging done right |
+| 14:00 | [10 Testing with pytest](notebooks/10_testing_with_pytest.ipynb) | Tests, fixtures, parametrize, what to test in data science code |
+| 15:00 | [11 From notebook to package](notebooks/11_from_notebook_to_package.ipynb) | `src` layout, `pyproject.toml`, imports, entry points |
+| 15:25 | [12 Capstone](notebooks/12_capstone.ipynb) | Refactor the warm-up into a tested package, in pairs |
+| 17:00 | Show and tell, retrospective | What you built, what you take home |
 
 ### Self-study and challenge track
 

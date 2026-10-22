@@ -11,7 +11,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 - **One story:** a telecom churn model, real data (`data/raw/telco_churn.csv`). Notebook 00 is a working but fragile notebook with a hidden bug: it re-fits its encoder on each new batch, so a customer's score depends on who else is in the file. Day 1 builds the tools to fix it; day 2 turns the result into a tested package (capstone). The finished version is `src/churn`.
 - **Rhythm:** no input block longer than about 20 minutes. Every concept is followed by a hands-on exercise or a check-your-understanding question within 20 to 30 minutes.
 - **Differentiation:** every exercise exists at three levels (Core, Stretch, Challenge). The `X` notebooks are a challenge track. The capstone has three test files, one per level.
-- **Timing:** 09:00 to 17:00, coffee 10:30 to 10:45 and 15:15 to 15:30, lunch 12:30 to 13:30. That is 6.5 hours of teaching per day, 13 hours in total. The live path through each notebook fits this; everything under "Going further" is self-study.
+- **Timing:** 09:30 to 17:30, coffee 11:00 to 11:15 and 15:45 to 16:00, lunch 13:00 to 14:00. That is 6.5 hours of teaching per day, 13 hours in total. The live path through each notebook fits this; everything under "Going further" is self-study.
 
 ---
 
@@ -34,7 +34,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 
 ## Day 1: OOP foundations
 
-### 09:00 to 09:20 · Opening (20 min)
+### 09:30 to 09:50 · Opening (20 min)
 
 | | |
 | --- | --- |
@@ -44,7 +44,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | Participants | One word each: "How do you feel about writing classes?" Write one sticky for "I know" and one for "I want to learn" on the KWL board. Run `scripts/check_setup.py` with their buddy. |
 | If setup fails | Pair the person with their buddy's screen for the morning and fix it at the coffee break. Do not debug installations in front of the group. |
 
-### 09:20 to 09:50 · 00 Warm-up: what's wrong with this code? (30 min)
+### 09:50 to 10:20 · 00 Warm-up: what's wrong with this code? (30 min)
 
 | | |
 | --- | --- |
@@ -54,7 +54,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | Key moment | The same customer gets a different prediction depending on the batch. Leave it open: "By this afternoon you will be able to explain and fix this." Write it on the parking lot. |
 | Differentiation | Experienced participants usually spot the bug. Ask them not to reveal it, and to write down how they would design the fix instead. |
 
-### 09:50 to 10:30 and 10:45 to 11:30 · 01 Classes and objects (85 min, coffee in between)
+### 10:20 to 11:00 and 11:15 to 12:00 · 01 Classes and objects (85 min, coffee in between)
 
 | | |
 | --- | --- |
@@ -64,7 +64,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | After the break (45 min) | 10 min properties and `@classmethod` (`from_predictions`; show that scikit-learn uses the same name). 30 min exercise `ChurnDataset` (Core), Stretch and Challenge for those who finish. 5 min: one pair shows its solution. |
 | Watch for | Beginners mixing up the class and the instance (`ConfusionMatrix.precision` vs `cm.precision`). Ask "which customer table? which matrix?" rather than correcting. |
 
-### 11:30 to 12:30 · 02 Inheritance (60 min)
+### 12:00 to 13:00 · 02 Inheritance (60 min)
 
 | | |
 | --- | --- |
@@ -73,7 +73,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | Flow | 15 min demo: `BaselineModel` with inherited `evaluate`, `MajorityClassModel` (great accuracy, zero recall: discuss why accuracy misleads at 27% churn), `ContractRuleModel`. 10 min `super()` and overriding. 25 min exercise `TenureRuleModel` (Core) and learning the threshold in `fit` (Stretch). 10 min plenary: the "is-a" test, and a teaser that day 2 prefers composition. |
 | Challenge track | The `CombinedRuleModel` exercise is a design discussion in disguise. Ask an experienced pair to present it after lunch in 3 minutes. |
 
-### 13:30 to 14:15 · 03 Special methods (45 min)
+### 14:00 to 14:45 · 03 Special methods (45 min)
 
 | | |
 | --- | --- |
@@ -82,7 +82,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | Flow | 5 min after-lunch activation: two "what does this print?" questions. 15 min `__repr__`, `__len__`, `__iter__` (unpacking like scikit-learn's `ravel()`), `__eq__`. 10 min `__add__` for pooling folds and `__call__` for the `RetentionCost` metric. 15 min exercise `CVResult` (Core) or pooling with `__radd__` (Stretch, Challenge). |
 | Message to repeat | Only overload an operator when its meaning is obvious. `cm1 + cm2` is obvious; `model_a < model_b` is not. |
 
-### 14:15 to 15:15 · 04 Encapsulation and abstraction (60 min)
+### 14:45 to 15:45 · 04 Encapsulation and abstraction (60 min)
 
 | | |
 | --- | --- |
@@ -91,7 +91,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | Flow | 10 min: back to the parking lot. Ask questions until the group finds the cause (the encoder learns from whatever batch it sees). 15 min: build `OneHotEncoder` with `fit`/`transform` and show the bug is gone. 10 min: `_internal` names (a convention, not a lock), returning copies, a validating property. 5 min: `Transformer` ABC, an incomplete subclass fails at creation. 20 min: exercise `MedianImputer` (Core), unseen categories (Stretch), `TransformerChain` (Challenge). |
 | Watch for | The claim "underscore makes it private". It does not; it tells colleagues what they may rely on. |
 
-### 15:30 to 16:20 · 05 Polymorphism, duck typing and protocols (50 min)
+### 16:00 to 16:50 · 05 Polymorphism, duck typing and protocols (50 min)
 
 | | |
 | --- | --- |
@@ -100,7 +100,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | Flow | 15 min: the leaderboard function evaluating rule baselines and scikit-learn models together. 10 min: duck typing, and why `cross_val_score` still rejects our rule models (it clones, so it needs `get_params`; this is the hook for X2). 10 min: `Protocol` vs ABC, decision table. 15 min: exercise (add `GradientBoostingClassifier` without touching the function; Stretch and Challenge on probabilities and cost-optimal thresholds). |
 | Energy | This is the low point of the afternoon. Keep the input short and let people type. |
 
-### 16:20 to 16:50 · 06 Code safari: reading real code (30 min)
+### 16:50 to 17:20 · 06 Code safari: reading real code (30 min)
 
 | | |
 | --- | --- |
@@ -109,7 +109,7 @@ How to run the two days. Written for whoever teaches the workshop, including a c
 | Flow | 2 min: assign one station per pair. 15 min: pairs work through their station's questions. 10 min: each pair explains its finding in one minute ("we found a mixin, here is what it does"). 3 min: the reading checklist at the end of the notebook. |
 | Differentiation | Give the most experienced pair the `BaseEstimator.get_params` challenge. |
 
-### 16:50 to 17:00 · Exit ticket (10 min)
+### 17:20 to 17:30 · Exit ticket (10 min)
 
 KWL third column ("what I learned", one sticky each) and a muddiest-point card: "What is still unclear?" Collect the cards. Read them in the evening and pick the two or three most frequent themes for tomorrow's recap.
 
@@ -117,11 +117,11 @@ KWL third column ("what I learned", one sticky each) and a muddiest-point card: 
 
 ## Day 2: Software engineering and architecture
 
-### 09:00 to 09:15 · Recap (15 min)
+### 09:30 to 09:45 · Recap (15 min)
 
 Answer the most common muddiest points from the exit tickets, with code, briefly. Then three peer-instruction questions mixing day 1 topics (one each on instance state, inheritance, a special method). Vote, discuss, vote again.
 
-### 09:15 to 10:30 · 07 Type hints, docstrings and dataclasses (75 min)
+### 09:45 to 11:00 · 07 Type hints, docstrings and dataclasses (75 min)
 
 | | |
 | --- | --- |
@@ -130,7 +130,7 @@ Answer the most common muddiest points from the exit tickets, with code, briefly
 | Flow | 5 min hook: the config dict with a typo that silently does nothing. 15 min type hints essentials and a mypy run (show it in the terminal). 10 min Google-style docstrings, `help()`. 10 min Core exercise: annotate and document. 15 min dataclasses: generated methods, `field(default_factory=...)`, `__post_init__` validation, `frozen=True`, `from_json`. 15 min Core exercise: the experiment config dataclass. 5 min: Pydantic in one slide, "validate at the boundary". |
 | Challenge track | The Pydantic exercise and the question "where should validation live?" |
 
-### 10:45 to 11:45 · 08 Design and architecture (60 min)
+### 11:15 to 12:15 · 08 Design and architecture (60 min)
 
 | | |
 | --- | --- |
@@ -139,7 +139,7 @@ Answer the most common muddiest points from the exit tickets, with code, briefly
 | Flow | 10 min: show the god class, ask "how would you test this without the CSV file?" 15 min: concepts with the refactored version (composition, layers, dependency injection). 15 min: pairs sketch the class diagram of the refactored warm-up on paper or in Mermaid. 10 min: gallery walk, everyone leaves one sticky ("I like", "I wonder") on two other diagrams. 10 min: Core coding exercise (inject the loader) or Stretch (SQLite loader). |
 | Challenge track | The code review exercise with four design problems. Experienced participants can do this instead of the sketch. |
 
-### 11:45 to 12:30 · 09 Exceptions and logging (45 min)
+### 12:15 to 13:00 · 09 Exceptions and logging (45 min)
 
 | | |
 | --- | --- |
@@ -147,7 +147,7 @@ Answer the most common muddiest points from the exit tickets, with code, briefly
 | Methods | Debugging exercise, live coding |
 | Flow | 5 min: a function that returns `None` on bad data and the silent damage it causes downstream. 15 min: raising the right exception, the project hierarchy, `raise ... from`, catching at the boundary. 10 min: module loggers, levels, why libraries never call `basicConfig` (show `src/churn/__main__.py`). 15 min: exercise `validate_batch` (Core), wrapping and logging (Stretch), `ExceptionGroup` (Challenge). |
 
-### 13:30 to 14:30 · 10 Testing with pytest (60 min)
+### 14:00 to 15:00 · 10 Testing with pytest (60 min)
 
 | | |
 | --- | --- |
@@ -156,7 +156,7 @@ Answer the most common muddiest points from the exit tickets, with code, briefly
 | Flow | 15 min: run `uv run pytest` on the repo, open `tests/test_features.py` and read two tests together (Arrange, Act, Assert). 15 min: asserts, `pytest.approx`, `pytest.raises`, fixtures, parametrize, demonstrated in the notebook. 25 min: participants write tests in `playground/` (Core: ConfusionMatrix tests; Stretch: parametrize and fixtures; Challenge: reproduce the warm-up bug as a failing test, then fix it). 5 min: what not to test. |
 | Watch for | People calling fixtures directly. pytest injects them by argument name. |
 
-### 14:30 to 14:55 · 11 From notebook to package (25 min)
+### 15:00 to 15:25 · 11 From notebook to package (25 min)
 
 | | |
 | --- | --- |
@@ -164,16 +164,16 @@ Answer the most common muddiest points from the exit tickets, with code, briefly
 | Methods | Guided walkthrough with checkpoints |
 | Flow | Tour of the repository tree, `pyproject.toml` section by section, what `uv sync` did, `import churn` from anywhere, `python -m churn`, `uv run churn-train`. Checkpoint: everyone runs `uv run pytest tests_capstone` and sees red tests. That red is the starting point of the capstone. |
 
-### 14:55 to 15:15 and 15:30 to 16:30 · 12 Capstone (80 min, coffee in between)
+### 15:25 to 15:45 and 16:00 to 17:00 · 12 Capstone (80 min, coffee in between)
 
 | | |
 | --- | --- |
 | Goal | Refactor the warm-up notebook into the `churn_capstone` package until the acceptance tests pass. |
 | Methods | Pair programming (driver and navigator, swap every 15 minutes), hackathon light |
 | Levels | Core tests: everyone aims for these. Stretch tests: configuration, error hierarchy, a useful model. Challenge tests: robustness and persistence, then the extension menu in the notebook. |
-| Trainer | Walk around. When a pair is stuck, ask what the failing test expects before looking at their code. Keep a visible tally of passing tests per pair if the group likes a bit of competition; skip it if it creates pressure. At 16:20 announce ten minutes left and ask pairs to prepare their show and tell. |
+| Trainer | Walk around. When a pair is stuck, ask what the failing test expects before looking at their code. Keep a visible tally of passing tests per pair if the group likes a bit of competition; skip it if it creates pressure. At 16:50 announce ten minutes left and ask pairs to prepare their show and tell. |
 
-### 16:30 to 17:00 · Closing (30 min)
+### 17:00 to 17:30 · Closing (30 min)
 
 | | |
 | --- | --- |

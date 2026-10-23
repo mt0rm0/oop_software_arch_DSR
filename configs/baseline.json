@@ -1,0 +1,6 @@
+{
+  "model": "logistic_regression",
+  "test_size": 0.2,
+  "random_state": 42,
+  "threshold": 0.3
+}

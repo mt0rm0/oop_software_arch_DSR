@@ -1,45 +1,41 @@
 # ── Python ────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
 *.egg-info/
 dist/
 build/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # ── uv / virtual environments ─────────────────────────────────────────────
 .venv/
-# uv.lock is intentionally committed — it pins exact versions for reproducibility
+# uv.lock is committed on purpose: it pins exact versions for reproducibility
 
-# ── Data — track with DVC instead of git ──────────────────────────────────
-data/raw/
+# ── Data ──────────────────────────────────────────────────────────────────
+# The workshop dataset (data/raw/telco_churn.csv, ~1 MB, Apache-2.0) is committed
+# so the course works offline. In your own projects, track data with DVC instead.
 data/interim/
 data/processed/
-*.csv
 *.parquet
 *.feather
-*.arrow
-# Exceptions: small reference files
-!data/sample_*.csv
-!data/description.json
 
-# ── Models — large binary artefacts ───────────────────────────────────────
+# ── Models and other artefacts ────────────────────────────────────────────
 models/
 *.pkl
 *.joblib
-*.pt
-*.pth
-*.h5
-*.onnx
+mlruns/
+mlartifacts/
+.dvc/tmp/
 
 # ── Jupyter ───────────────────────────────────────────────────────────────
 .ipynb_checkpoints/
-*/.ipynb_checkpoints/
 
-# ── VS Code — commit settings.json and extensions.json, ignore personal state
-.vscode/*.log
-.vscode/launch.json
-.vscode/.ropeproject
+# ── Workshop scratch space (your own experiments, never committed) ────────
+playground/*
+!playground/README.md
 
 # ── Secrets ───────────────────────────────────────────────────────────────
 .env
@@ -49,10 +45,9 @@ models/
 secrets.yaml
 credentials.json
 
-# ── OS ────────────────────────────────────────────────────────────────────
+# ── OS / editors ──────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
-
-# ── MLflow / DVC artefacts ─────────────────────────────────────────────────
-mlruns/
-.dvc/tmp/
+.idea/
+.vscode/*.log
+.vscode/launch.json

@@ -1,6 +1,6 @@
-"""Stretch: configuration, errors as a family, and a model that is actually useful.
+"""If you finish early: configuration, errors as a family, and a model that is actually useful.
 
-The contract (in addition to core):
+The contract (in addition to test_1_essentials.py):
     churn_capstone.config.ExperimentConfig     dataclass with test_size and random_state
     churn_capstone.errors.ChurnError           base class of all your exceptions
     churn_capstone.errors.NotFittedError       raised when predicting before fit

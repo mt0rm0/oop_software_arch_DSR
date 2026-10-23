@@ -1,6 +1,6 @@
 """Challenge: robustness and persistence.
 
-The contract (in addition to stretch):
+The contract (in addition to test_2_extended.py):
     churn_capstone.errors.DataQualityError     raised for unusable values
     model.save(path) / ChurnModel.load(path)   round trip
 """

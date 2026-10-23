@@ -3,7 +3,7 @@
 Run them with:
 
     uv run pytest tests_capstone                 # everything
-    uv run pytest tests_capstone/test_1_core.py  # one level at a time
+    uv run pytest tests_capstone/test_1_essentials.py  # one file at a time
 
 They test your package `churn_capstone`. Trainers can check that the tests are
 achievable by running them against the reference solution:

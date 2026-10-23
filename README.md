@@ -78,21 +78,20 @@ Both days run from 09:30 to 17:30, with coffee breaks at 11:00 and 15:45 (15 min
 
 ## How the notebooks work
 
-Every notebook follows the same pattern: a problem from the churn project, the concept that solves it, a short demo, and exercises. Exercises come in three levels:
+Every notebook alternates between two kinds of sections:
 
-- **Core**: everyone does these. They practise the main idea with guidance.
-- **Stretch**: for when you finish early. Same idea, less guidance.
-- **Challenge**: for people who already know OOP. Open questions about design and about how real libraries do it.
+- **Theory** sections explain one concept on its own terms: what it is, the syntax, how Python behaves, and the usual pitfalls, with small examples you can run. **Check your understanding** questions come with a cell to run: predict the output first, then run it.
+- **Hands-on** sections apply that concept to the churn project. Each exercise tells you exactly what your code should do, and lists the pandas and NumPy operations you need, so the exercise is about the programming idea and not about remembering a pandas function.
+
+Exercises are marked only when they are extra: *"If you finish early, try this one"* for an extra step, and **Challenge** for open design questions aimed at people who already know OOP. Everything else is for everyone.
 
 Each exercise has a **check cell** with a few `assert` statements. It fails until you have solved the exercise; that is expected. Hints and full solutions are hidden in collapsible blocks below each exercise. Try first, then peek.
-
-Sections called **Going further** are not part of the live session. They are there for later.
 
 Every exercise is done at the computer, and every one works **alone or in pairs**, in the room or online. In pairs, one person types (the driver) and the other reviews and thinks ahead (the navigator); swap at every exercise. Online, the driver shares their screen or you both join a VS Code Live Share session.
 
 Each exercise ends with a **Discuss** question: a design choice, a trade-off, or a link to your own work. Talk it through with your partner or the group. If you work alone, write a two-sentence answer in a markdown cell; explaining your reasoning in writing is one of the fastest ways to find out what you have not understood yet.
 
-**Check your understanding** questions come with a cell to run: predict the output first, then run it.
+Sections called **Going further** are not part of the live session. They are there for later.
 
 ---
 

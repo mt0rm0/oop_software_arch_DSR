@@ -1,4 +1,4 @@
-"""Core: everybody should get these green.
+"""Essentials: everybody should get these green.
 
 The contract:
     churn_capstone.data.load_customers(path)  -> cleaned DataFrame
